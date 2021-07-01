@@ -2,6 +2,8 @@ name: Mkdocs
 
 on:
   push:
+    paths:
+      - mkdocs/**/*
     branches:
       - main
 
