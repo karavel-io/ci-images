@@ -7,7 +7,6 @@ RUN pip install -r requirements.txt
 
 WORKDIR /docs
 
-EXPOSE 8000
-
 ENTRYPOINT ["mkdocs"]
-CMD ["serve", "--dev-addr=0.0.0.0:8000"]
+# This needs to be run in host network mode to work
+CMD ["serve", "--dev-addr=127.0.0.1:8000"]
