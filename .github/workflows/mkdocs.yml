@@ -19,7 +19,7 @@ jobs:
       - name: Build container image
         uses: docker/build-push-action@v2
         with:
-          file: mkdocs/Dockerfile
+          context: mkdocs
           push: true
           tags: |
             ghcr.io/projectkaravel/ci-images/mkdocs:${{ github.sha }}

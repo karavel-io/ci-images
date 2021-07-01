@@ -1,6 +1,7 @@
 FROM python:3.9.2-alpine3.13
 
-RUN pip install mkdocs mkdocs-material mkdocs-monorepo-plugin mkdocs-versioning
+COPY ./requirements.txt .
+RUN pip install -r requirements.txt
 
 WORKDIR /docs
 
