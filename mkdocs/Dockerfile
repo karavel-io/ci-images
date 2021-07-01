@@ -1,5 +1,7 @@
 FROM python:3.9.2-alpine3.13
 
+RUN apk add --no-cache gcc musl-dev
+
 COPY ./requirements.txt .
 RUN pip install -r requirements.txt
 
